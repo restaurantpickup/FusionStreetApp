@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Baker Shack</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+   	<link rel="shortcut icon" type="image/png" href="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/72223620_143316837028105_8656961370585038848_o.jpg?_nc_cat=107&ccb=2&_nc_sid=e3f864&_nc_ohc=-EbXjLs4vUMAX-uO6ER&_nc_ht=scontent-sea1-1.xx&oh=b5c1ac615b98a7f2252e8c6193b21ad1&oe=603201AA"/>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
