@@ -119,18 +119,26 @@ export default function Meals() {
 
     //Search by "meal_type"
     const filterFirst = () => {
-    const result =  meals.filter(meal => meal.meal_type === 'Juice')
+    const result =  meals.filter(meal => meal.meal_type === 'Breakfast')
     setFilteredMeals(result)
     }
     const filterSecond = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Rolls')
+      const result =  meals.filter(meal => meal.meal_type === 'Lunch')
     setFilteredMeals(result) 
     }
     const filterThird = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Dining')
+      const result =  meals.filter(meal => meal.meal_type === 'Sides')
       setFilteredMeals(result)
     }
-   
+    const filterFourth = () => {
+      const result =  meals.filter(meal => meal.meal_type === 'KM')
+      setFilteredMeals(result)
+    }
+    const filterFifth = () => {
+      const result =  meals.filter(meal => meal.meal_type === 'Beverages')
+      setFilteredMeals(result)
+    }
+  
     
     //Mapping through the Meals array with styling
     const grid = filteredMeals.map( meal => {
@@ -148,14 +156,19 @@ export default function Meals() {
       <TopContainer>
       <ParagraphContainer>
           <ParagraphText>
-            <strong>{'DiscoKitchen App'}</strong>					
+            <strong>{'Baker Shack'}</strong>					
           </ParagraphText>
           </ParagraphContainer>
           <ButtonContainer>
           <NavButton onClick={filterAll}>Full Menu</NavButton>
-          <NavButton onClick={filterFirst}>Disco Juice</NavButton>
-          <NavButton onClick={filterSecond}>Disco Rolls</NavButton>
-          <NavButton onClick={filterThird}>Intimate Dining</NavButton>
+          <NavButton onClick={filterFirst}>Baker's Breakfast 7:00-10:30 A.M.</NavButton>
+          <NavButton onClick={filterSecond}>Baker's Lunch 10:30-2:30 P.M.</NavButton>
+        
+          </ButtonContainer>
+          <ButtonContainer>
+          <NavButton onClick={filterThird}>Baker's Sides</NavButton>
+          <NavButton onClick={filterFourth}>Kid Friendly Choices</NavButton>
+          <NavButton onClick={filterFifth}>Baker's Beverages</NavButton>
           </ButtonContainer>
           </TopContainer> 
       </TopContentContainer>   

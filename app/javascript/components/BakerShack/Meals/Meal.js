@@ -92,7 +92,7 @@ export default function Meal(props) {
 
     return (
     <Box meal={meal} title={  <CompanyLogo>
-        <img src={'https://restaurantpickupapp.com/ChefCraig/links/DiscoKitchen.jpeg'} alt={'DiscoKitchen'} />
+        <img src={'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/72223620_143316837028105_8656961370585038848_o.jpg?_nc_cat=107&ccb=2&_nc_sid=e3f864&_nc_ohc=-EbXjLs4vUMAX-uO6ER&_nc_ht=scontent-sea1-1.xx&oh=b5c1ac615b98a7f2252e8c6193b21ad1&oe=603201AA'} alt={'Baker Shack'} />
     </CompanyLogo>} actions={<LinkButton onClick={handleLink}><PickupIconPlus/> </LinkButton> }>
         <MealLogo>
             <img src={meal.image_url} alt={meal.name} />

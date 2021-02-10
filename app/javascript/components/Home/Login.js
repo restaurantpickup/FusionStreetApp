@@ -110,7 +110,7 @@ useEffect(() => {
     return (
       <Wrapper>
           <Container>
-          <PickupContainer onClick={handleLink}><CompanyLogo><img src={'https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/140428703_452181602808292_6207389758065808831_n.jpg?_nc_cat=101&ccb=2&_nc_sid=8bfeb9&_nc_ohc=hhx3I13WcrkAX_buWpd&_nc_ht=scontent-sea1-1.xx&oh=8a296b36dd13d64a266d82fd7419cc4a&oe=6033F7CF'} alt={'Simplified Nutrition'} /></CompanyLogo><Block>Baker Shack</Block></PickupContainer>
+          <PickupContainer onClick={handleLink}><CompanyLogo><img src={'https://github.com/restaurantpickup/FreeDemo/blob/main/links/RPA.png?raw=true'} alt={'BakerShack'} /></CompanyLogo><Block></Block></PickupContainer>
 
        </Container>  
       </Wrapper>  

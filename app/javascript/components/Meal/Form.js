@@ -229,123 +229,28 @@ export default function Header() {;
             <Wrapper>
             <IngredientBox title={`Item: (${(n)})${singleMeal.name}`} actions={''}>      
           
-              {singleMeal.meal_type === 'Breakfast' && singleMeal.name === 'Baker Biscuits & Sausage Gravy' &&
+              {singleMeal.meal_type === 'Juice'  &&
                 <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Half Order', 3])}>{(price && price[0] === 'Half Order') ? <Red>Half Order: $3.00</Red> : 'Half Order: $3.00'}</NavButton>
-              <NavButton onClick={() => setPrice(['Full Order', 5])}>{(price && price[0] === 'Full Order') ? <Red>Full Order: $5.00</Red> : 'Full Order: $5.00'}</NavButton>
-              </ButtonContainer>
-              }
-                  {singleMeal.meal_type === 'Breakfast' && singleMeal.name === 'Baker’s Breakfast Wrap' &&
-                <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Bacon', 5.25])}>{(price && price[0] === 'Bacon') ? <Red>Bacon $5.25</Red> : 'Bacon: $5.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['Canadian Bacon',  5.25])}>{(price && price[0] === 'Canadian Bacon') ? <Red>Canadian Bacon: $5.25</Red> : 'Canadian Bacon: $5.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['Sausage', 5.25])}>{(price && price[0] === 'Sausage') ? <Red>Sausage $5.25</Red> : 'Sausage: $5.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['Egg',  4.75])}>{(price && price[0] === 'Egg') ? <Red>Egg: $4.75</Red> : 'Egg: $4.75'}</NavButton>
-              <NavButton onClick={() => setPrice(['All Meat', 7.25])}>{(price && price[0] === 'All Meat') ? <Red>All Meat: $7.25</Red> : 'All Meat: $7.25'}</NavButton>
-              </ButtonContainer>
-              }
-                          {singleMeal.meal_type === 'Breakfast' && singleMeal.name === 'Baker’s Breakfast Bowl' &&
-                <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Bacon', 5.75])}>{(price && price[0] === 'Bacon') ? <Red>Bacon $5.75</Red> : 'Bacon $5.75'}</NavButton>
-              <NavButton onClick={() => setPrice(['Canadian Bacon',  5.75])}>{(price && price[0] === 'Canadian Bacon') ? <Red>Canadian Bacon: $5.75</Red> : 'Canadian Bacon: $5.75'}</NavButton>
-              <NavButton onClick={() => setPrice(['Sausage', 5.25])}>{(price && price[0] === 'Sausage') ? <Red>Sausage: $5.25</Red> : 'Sausage: $5.25'}</NavButton>
-              </ButtonContainer>
-              }
-
-                        {singleMeal.meal_type === 'Breakfast' && singleMeal.name === 'Breakfast Sandwhich' &&
-                <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Bacon', 4])}>{(price && price[0] === 'Bacon') ? <Red>Bacon $4.00</Red> : 'Bacon $4.00'}</NavButton>
-              <NavButton onClick={() => setPrice(['Canadian Bacon',  4])}>{(price && price[0] === 'Canadian Bacon') ? <Red>Canadian Bacon: $4.00</Red> : 'Canadian Bacon: $4.00'}</NavButton>
-              <NavButton onClick={() => setPrice(['Sausage', 4])}>{(price && price[0] === 'Sausage') ? <Red>Sausage: $4.00</Red> : 'Sausage: $4.00'}</NavButton>
-              </ButtonContainer>
-              }
-                            {singleMeal.meal_type === 'Lunch' && singleMeal.name === 'BLTC Wrap' &&
-                <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Regular', 7.25])}>{(price && price[0] === 'Regular') ? <Red>W/ Salad $7.25</Red> : 'Regular $7.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['W/ Salad', 8])}>{(price && price[0] === 'W/ Salad') ? <Red>W/ Salad $8.00</Red> : 'W/ Salad $8.00'}</NavButton>
-              </ButtonContainer>
-              }
-
-                          
-              {singleMeal.meal_type === 'Lunch' && singleMeal.name === 'Baker’s Chicken Salad Wrap' &&
-                <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Wrap', 7.25])}>{(price && price[0] === 'Wrap') ? <Red>Wrap $7.25</Red> : 'Wrap $7.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['Salad Croissant', 6.75])}>{(price && price[0] === 'Salad Croissant') ? <Red>Salad Croissant $6.75</Red> : 'Salad Croissant $6.75'}</NavButton>
+              <NavButton onClick={() => setPrice(['32oz', 25])}>{(price && price[0] === '32oz') ? <Red>32oz: $25.00</Red> : '32oz: $25.00'}</NavButton>
+        
 
               </ButtonContainer>
               }
-           
-                {singleMeal.meal_type === 'Lunch' && singleMeal.name === 'Mexi Chicken Wrap' &&
+                  {singleMeal.meal_type === 'Rolls'  &&
                 <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Regular', 6.75])}>{(price && price[0] === 'Regular') ? <Red>Regular $6.75</Red> : 'Regular $6.75'}</NavButton>
-              <NavButton onClick={() => setPrice(['W/ MEXI CHICKEN SALAD', 7.5])}>{(price && price[0] === 'W/ MEXI CHICKEN SALAD') ? <Red>W/ MEXI CHICKEN SALAD  $7.50</Red> : 'W/ MEXI CHICKEN SALAD  $7.50'}</NavButton>
+             <NavButton onClick={() => setPrice(['10', 30])}>{(price && price[0] === '10') ? <Red>10: $30.00</Red> : '10: $30.00'}</NavButton>
+              <NavButton onClick={() => setPrice(['25', 75])}>{(price && price[0] === '25') ? <Red>25: $75.00</Red> : '25: $75.00'}</NavButton>
+              <NavButton onClick={() => setPrice(['50', 75])}>{(price && price[0] === '50') ? <Red>50: $125.00</Red> : '50: $125.00'}</NavButton>
+              </ButtonContainer>
+              }
+                          {singleMeal.meal_type === 'Dining'  &&
+                <ButtonContainer>
+              <NavButton onClick={() => setPrice(['Consult Credit', 100])}>{(price && price[0] === 'Consult Credit') ? <Red>Consult Credit $100.00</Red> : 'Consult Credit $100.00'}</NavButton>
+      
+              </ButtonContainer>
+              }
 
-              </ButtonContainer>
-              }
-              {singleMeal.meal_type === 'Lunch' && singleMeal.name === 'Mexi Ground Beef Wrap' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Regular', 6.75])}>{(price && price[0] === 'Regular') ? <Red>Regular $6.75</Red> : 'Regular $6.75'}</NavButton>
-              <NavButton onClick={() => setPrice(['W/ MEXI BEEF SALAD ', 7.5])}>{(price && price[0] === 'W/ MEXI BEEF SALAD') ? <Red>W/ MEXI BEEF SALAD   $7.50</Red> : 'W/ MEXI BEEF SALAD  $7.50'}</NavButton>
 
-              </ButtonContainer>
-              }
-                {singleMeal.meal_type === 'Lunch' && singleMeal.name === 'Bacon Cheeseburger Wrap' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Regular', 7.25])}>{(price && price[0] === 'Regular') ? <Red>Regular $7.25</Red> : 'Regular $7.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['W/  SALAD ', 7.5])}>{(price && price[0] === 'W/ Salad') ? <Red>W/ SALAD   $8.00</Red> : 'W/ SALAD  $8.00'}</NavButton>
-
-              </ButtonContainer>
-              }
-               {singleMeal.meal_type === 'Sides' && singleMeal.name === 'Soup of the Day' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Cup', 3.25])}>{(price && price[0] === 'Cup') ? <Red>Cup $3.25</Red> : 'Cup $3.25'}</NavButton>
-              <NavButton onClick={() => setPrice(['Bowl ', 4.25])}>{(price && price[0] === 'Bowl') ? <Red>Bowl   $4.25</Red> : 'Bowl  $4.25'}</NavButton>
-
-              </ButtonContainer>
-              }
-                {singleMeal.meal_type === 'Sides' && singleMeal.name === 'Sauce' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Fry', .50])}>{(price && price[0] === 'Fry') ? <Red>Fry $0.50</Red> : 'Fry $0.50'}</NavButton>
-               <NavButton onClick={() => setPrice(['Ranch', .50])}>{(price && price[0] === 'Ranch') ? <Red>Ranch $0.50</Red> : 'Ranch $0.50'}</NavButton>
-               <NavButton onClick={() => setPrice(['Cheese', .50])}>{(price && price[0] === 'Cheese') ? <Red>Cheese $0.50</Red> : 'Cheese $0.50'}</NavButton>
-               <NavButton onClick={() => setPrice(['Salsa', .50])}>{(price && price[0] === 'Salsa') ? <Red>Salsa $0.50</Red> : 'Salsa $0.50'}</NavButton>
-
-              </ButtonContainer>
-              }
-               {singleMeal.meal_type === 'Sides' && singleMeal.name === 'Biscotti' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Lemon Almond', 1])}>{(price && price[0] === 'Lemon Almond') ? <Red>Lemon Almond $1.00</Red> : 'Lemon Almond $1.00'}</NavButton>
-               <NavButton onClick={() => setPrice(['Hazelnut', 1])}>{(price && price[0] === 'Hazelnut') ? <Red>Hazelnut $1.00</Red> : 'Hazelnut $1.00'}</NavButton>
-
-              </ButtonContainer>
-              }
-                  {singleMeal.meal_type === 'KM' && 
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['Fries', 7.25])}>{(price && price[0] === 'Fries') ? <Red>Fries 7.25</Red> : 'Fries $7.25'}</NavButton>
-               <NavButton onClick={() => setPrice(['Chips', 7.25])}>{(price && price[0] === 'Chips') ? <Red>Chips 7.25</Red> : 'Chips $7.25'}</NavButton>
-               <NavButton onClick={() => setPrice(['Applesauce', 7.25])}>{(price && price[0] === 'Applesauce') ? <Red>Applesauce 7.25</Red> : 'Applesauce $7.25'}</NavButton>
-               <NavButton onClick={() => setPrice(['Dipping Sauce', 7.25])}>{(price && price[0] === 'Dipping Sauce') ? <Red>Dipping Sauce 7.25</Red> : 'Dipping Sauce $7.25'}</NavButton>
-               <NavButton onClick={() => setPrice(['Juice Box', 7.25])}>{(price && price[0] === 'Juice Box') ? <Red>Juice Box 7.25</Red> : 'Juice Box $7.25'}</NavButton>
-              </ButtonContainer>
-              }
-               {singleMeal.meal_type === 'Beverages' && singleMeal.name === 'Austrian Coffee' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice([' 12 oz.', 2])}>{(price && price[0] === ' 12 oz.') ? <Red>12 oz. $2.00</Red> : ' 12 oz. $2.00'}</NavButton>
-               <NavButton onClick={() => setPrice(['16 oz. ', 2.50])}>{(price && price[0] === '16 oz. ') ? <Red>16 oz. $3.50 $2.50</Red> : '16 oz. $2.50'}</NavButton>
-
-              </ButtonContainer>
-              }
-               {singleMeal.meal_type === 'Beverages' && singleMeal.name === 'London Fog' &&
-                <ButtonContainer>
-               <NavButton onClick={() => setPrice(['12 oz.', 2.50 ])}>{(price && price[0] === '12 oz.') ? <Red>12 oz. $2.50 </Red> : '12 oz. $2.50 '}</NavButton>
-               <NavButton onClick={() => setPrice(['16 oz. ', 3.50])}>{(price && price[0] === '16 oz. ') ? <Red>16 oz. $3.50</Red> : '16 oz. $3.50'}</NavButton>
-
-              </ButtonContainer>
-              }
-              
-                   
-          
-         
              </IngredientBox>
             <IngredientBox title={`Ticket Items: (${(pickup.length)})` } actions={<RedText>{`$${subTotal}`}</RedText>}>      
            <SmallGrid>

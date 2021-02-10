@@ -24,7 +24,7 @@ export default function Header() {
         </FlexStart>
         <FlexEnd>
         <PickupContainer to={'/bag'}><PickupIcon/><PickupCount>{pickup.length}</PickupCount> <Block></Block> </PickupContainer>
-        <UserContainer href={'https://restaurantpickupapp.com/RobBaker'}><UserIcon/><Block></Block></UserContainer>     
+        <UserContainer href={'https://restaurantpickupapp.com/DiscoKitchen'}><UserIcon/><Block></Block></UserContainer>     
         </FlexEnd>
     </Wrapper>
     )
