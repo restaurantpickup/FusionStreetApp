@@ -226,7 +226,7 @@ export default function Header(props) {;
           {pickupList}
           </SmallGrid>
              </IngredientBox>
-             <PageTitle title={<> </>} action={<A href={'https://restaurantpickupapp.com/#footer'}>Continue</A>}/> 
+             <PageTitle title={<> </>} action={<A href={'https://restaurantpickupapp.com/DiscoKitchen'}>Continue</A>}/> 
                </Wrapper>       
         
           </TopContainer>
