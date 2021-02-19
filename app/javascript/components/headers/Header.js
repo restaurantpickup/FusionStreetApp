@@ -20,11 +20,11 @@ export default function Header() {
     return (
     <Wrapper>
         <FlexStart>
-        <FTContainer to={'/meals'}> <FTIcon/><Block></Block></FTContainer>     
+        <FTContainer to={'/items'}> <FTIcon/><Block>Home</Block></FTContainer>     
         </FlexStart>
         <FlexEnd>
-        <PickupContainer to={'/bag'}><PickupIcon/><PickupCount>{pickup.length}</PickupCount> <Block></Block> </PickupContainer>
-        <UserContainer href={'https://restaurantpickupapp.com/DiscoKitchen'}><UserIcon/><Block></Block></UserContainer>     
+        <PickupContainer to={'/bag'}><PickupIcon/><PickupCount>{pickup.length}</PickupCount> <Block>Checkout</Block> </PickupContainer>
+        <UserContainer href={'https://restaurantpickupapp.com/VirtualRestaurant'}><UserIcon/><Block>Restaurant</Block></UserContainer>     
         </FlexEnd>
     </Wrapper>
     )

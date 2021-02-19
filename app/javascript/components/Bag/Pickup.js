@@ -246,18 +246,10 @@ export default function Pickup(props) {
            
        },[])
 
-       useEffect(() => {
-
-       },[])
-
-
   
-      
-
-
 
     return (
-    <SmallMealBox meal={meal} title={<TrashButton onClick={deleteFilter}><TrashIcon/></TrashButton>} actions={ <EditButton onClick={handleIngredients}><EditIcon/></EditButton>}>
+    <SmallMealBox meal={meal} title={<TrashButton onClick={deleteFilter}><TrashIcon/></TrashButton>} actions={'' }>
         {!toggleIngredient && 
         <>
             <SmallMealLogo>

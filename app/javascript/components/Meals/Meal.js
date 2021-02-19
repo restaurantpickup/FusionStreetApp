@@ -41,11 +41,29 @@ const MealName = styled.div`
 
     }
 `
+const PriceName = styled.div`
+    color: #E80000;
+    font-size: 1rem;
+
+    @media all and (min-width: 1200px){
+        font-size: .75rem;
+
+    }
+`
+const PiecesName = styled.div`
+    color: #005F7F;
+    font-size: 1rem;
+   
+    @media all and (min-width: 1200px){
+        font-size: .75rem;
+
+    }
+`
 const Block = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: .5rem;
 `
 const PickupIconPlus = styled(FaPlusCircle)`
     color: #005F7F;
@@ -82,22 +100,26 @@ const FTIcon = styled(FaHome)`
 export default function Meal(props) {
     const {meal} = props; 
     const {name} = props.meal
+    const {image} = props.meal.image_url
     const [singleMeal, setSingleMeal] = useContext(SingleMealContext)
 
     const history = useHistory()
     const handleLink = () => {
         setSingleMeal(meal)
-        history.push(`/meals/${name}`)
+        history.push(`/items/${name}`)
     }
+    console.log(meal.image_url)
 
     return (
     <Box meal={meal} title={  <CompanyLogo>
-        <img src={'https://restaurantpickupapp.com/ChefCraig/links/DiscoKitchen.jpeg'} alt={'DiscoKitchen'} />
-    </CompanyLogo>} actions={<LinkButton onClick={handleLink}><PickupIconPlus/> </LinkButton> }>
+        <img src={require('../Images/RestaurantPickup.png')} alt={'RestaurantPickup'} />
+    </CompanyLogo>} actions={<LinkButton onClick={handleLink}><PickupIconPlus/> </LinkButton> }> 
         <MealLogo>
             <img src={meal.image_url} alt={meal.name} />
         </MealLogo>
         <Block><MealName>{meal.name}</MealName></Block>
+        <Block><PriceName>${meal.price} ({meal.count_type}) Piece(s)</PriceName></Block>
+        <Block><PiecesName>({meal.count_type}) Piece(s)</PiecesName></Block>
     </Box>
     )
 }

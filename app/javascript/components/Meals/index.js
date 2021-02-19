@@ -104,6 +104,19 @@ const Grid = styled.div`
       grid-gap: 10px;
     }
 `
+const CompanyLogo = styled.div`
+    width: 33px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    img {
+        height: 33px;
+        width: 33px;
+        border-radius: 100%;
+        border: 1px solid #efefef;
+    }
+`
 
 export default function Meals() {
     const [meals, setMeals] = useContext(MealContext)
@@ -119,17 +132,27 @@ export default function Meals() {
 
     //Search by "meal_type"
     const filterFirst = () => {
-    const result =  meals.filter(meal => meal.meal_type === 'Juice')
+    const result =  meals.filter(meal => meal.meal_type === 'Catering')
     setFilteredMeals(result)
     }
     const filterSecond = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Rolls')
+      const result =  meals.filter(meal => meal.meal_type === 'Packing')
     setFilteredMeals(result) 
     }
     const filterThird = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Dining')
+      const result =  meals.filter(meal => meal.meal_type === 'Bar')
       setFilteredMeals(result)
     }
+    const filterFourth = () => {
+      const result =  meals.filter(meal => meal.meal_type === 'Website')
+      setFilteredMeals(result)
+    }
+    const filterFifth = () => {
+      const result =  meals.filter(meal => meal.meal_type === 'DiscoKitchen')
+      setFilteredMeals(result)
+    }
+  
+  
    
     
     //Mapping through the Meals array with styling
@@ -148,14 +171,15 @@ export default function Meals() {
       <TopContainer>
       <ParagraphContainer>
           <ParagraphText>
-            <strong>{'DiscoKitchen App'}</strong>					
+            <strong>{'Restaurant Pickup'}</strong>					
           </ParagraphText>
-          </ParagraphContainer>
+       </ParagraphContainer>
           <ButtonContainer>
-          <NavButton onClick={filterAll}>Full Menu</NavButton>
-          <NavButton onClick={filterFirst}>Disco Juice</NavButton>
-          <NavButton onClick={filterSecond}>Disco Rolls</NavButton>
-          <NavButton onClick={filterThird}>Intimate Dining</NavButton>
+          <NavButton onClick={filterAll}>Full List</NavButton>
+          <NavButton onClick={filterFirst}>Catering Supplies</NavButton>
+          <NavButton onClick={filterSecond}>Packaging Supplies</NavButton>
+          <NavButton onClick={filterThird}>Bar</NavButton>
+          <NavButton onClick={filterFourth}>Websites</NavButton>
           </ButtonContainer>
           </TopContainer> 
       </TopContentContainer>   

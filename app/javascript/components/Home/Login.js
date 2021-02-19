@@ -95,7 +95,7 @@ const getMeals = () => { axios.get('/api/v1/meals.json')
 //Pushing URL history to /meals
 const history = useHistory()
 const handleLink = () => { 
-    history.push(`/meals`)
+    history.push(`/items`)
 }
 
 //Calling functions when the DOM loads
@@ -110,7 +110,7 @@ useEffect(() => {
     return (
       <Wrapper>
           <Container>
-          <PickupContainer onClick={handleLink}><CompanyLogo><img src={'https://github.com/restaurantpickup/FreeDemo/blob/main/links/RPA.png?raw=true'} alt={'BakerShack'} /></CompanyLogo><Block></Block></PickupContainer>
+          <PickupContainer onClick={handleLink}><CompanyLogo><img src={require('../Images/RestaurantPickup.png')} alt={'RestaurantPickup'} /></CompanyLogo><Block></Block></PickupContainer>
 
        </Container>  
       </Wrapper>  

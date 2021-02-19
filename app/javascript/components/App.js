@@ -25,6 +25,7 @@ function useLocalStorage(key, defaultValue) {
    return [state, setState]
 }
 
+
 function App() {
     const [pickup, setPickup] = useLocalStorage('app:pickup',[]);
     const [meals, setMeals] = useLocalStorage('app:meals', []);
@@ -35,9 +36,10 @@ function App() {
          <SingleMealContext.Provider value={[singleMeal, setSingleMeal]}>
         <Switch>           
             <Route exact path='/' component={Login} />
-            <Route exact path='/meals' component={Meals} />
-            <Route exact path='/meals/:name' component={Meal} />
+            <Route exact path='/items' component={Meals} />
+            <Route exact path='/items/:name' component={Meal} />
             <Route exact path='/bag' component={Bag} />
+           
         </Switch>
          </SingleMealContext.Provider>  
          </MealContext.Provider>       

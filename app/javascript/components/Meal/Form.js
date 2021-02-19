@@ -152,11 +152,14 @@ export default function Header() {;
     const [singleMeal, setSingleMeal] = useContext(SingleMealContext)
     const [toggle, setToggle] = useState(false)
     const [n, setN] = useState(1)
-    const [price, setPrice] = useState([singleMeal.count_type, singleMeal.price])
+    const [price, setPrice] = useState([singleMeal.count_type, singleMeal.price, singleMeal.name])
     const [toggleIngredient, setToggleIngredient] = useState(false)
     
-    const ingredientList = singleMeal.ingredients.map((item, index) => {
+    const titleList = singleMeal.ingredients.map((item, index) => {
     return( <li key={index}><strong>{item.title}</strong></li>)})
+
+    const ingredientList = singleMeal.ingredients.map((item, index) => {
+      return( <ul key={index}><strong>{item.description}</strong></ul>)})
 
     const createPickup = () => {
      if(price){
@@ -206,11 +209,9 @@ export default function Header() {;
           <PageTitle title={<><RestaurantIcon/> {` ${singleMeal.name}`}</>} action={<EditButton onClick={handleIngredients}><InfoIcon/></EditButton>}/> 
             <Wrapper>
               {toggleIngredient && 
-              <IngredientBox title={`${singleMeal.name} ingredients: `}>  
-              <IngredientGrid>
-                      {ingredientList}
-              </IngredientGrid>
-              </IngredientBox>  
+               <IngredientGrid>
+               {titleList}
+       </IngredientGrid>
               }
               </Wrapper>  
           </MealContainer>
@@ -219,38 +220,49 @@ export default function Header() {;
           <TopMealContainer>
           <MealLogo>
             <img src={singleMeal.image_url} alt={singleMeal.name} />
+            <ingredientList>
+                {ingredientList}
+              </ingredientList> 
+             
           </MealLogo> 
+         
           </TopMealContainer>
           </div>
           <div>
           <TopMealContainer>
             <MealContainer>
             <PageTitle title={<><InvoiceIcon/> Invoice: </>} action={''}/>
-            <Wrapper>
-            <IngredientBox title={`Item: (${(n)})${singleMeal.name}`} actions={''}>      
+           
           
-              {singleMeal.meal_type === 'Juice'  &&
+            <Wrapper>
+            <IngredientBox title={`Item: (${(n)})${singleMeal.name}`} actions={''}>  
+           
+              {singleMeal.count_type === '1' && singleMeal.meal_type !== 'Website' &&
                 <ButtonContainer>
-              <NavButton onClick={() => setPrice(['32oz', 25])}>{(price && price[0] === '32oz') ? <Red>32oz: $25.00</Red> : '32oz: $25.00'}</NavButton>
-        
+                  <NavButton onClick={() => setPrice(['1', singleMeal.price, singleMeal.name])}>{(price && price[0] === '1') ? <Red>1</Red> : '1'}</NavButton>
+                  <NavButton onClick={() => setPrice(['5', singleMeal.price * 5, singleMeal.name])}>{(price && price[0] === '5') ? <Red>5</Red> : '5'}</NavButton>
+                  <NavButton onClick={() => setPrice(['10', singleMeal.price * 10, singleMeal.name])}>{(price && price[0] === '10') ? <Red>10</Red> : '10'}</NavButton>
 
               </ButtonContainer>
               }
-                  {singleMeal.meal_type === 'Rolls'  &&
+               {singleMeal.count_type !== '25' && singleMeal.meal_type === 'Website' &&
                 <ButtonContainer>
-             <NavButton onClick={() => setPrice(['10', 30])}>{(price && price[0] === '10') ? <Red>10: $30.00</Red> : '10: $30.00'}</NavButton>
-              <NavButton onClick={() => setPrice(['25', 75])}>{(price && price[0] === '25') ? <Red>25: $75.00</Red> : '25: $75.00'}</NavButton>
-              <NavButton onClick={() => setPrice(['50', 75])}>{(price && price[0] === '50') ? <Red>50: $125.00</Red> : '50: $125.00'}</NavButton>
-              </ButtonContainer>
-              }
-                          {singleMeal.meal_type === 'Dining'  &&
-                <ButtonContainer>
-              <NavButton onClick={() => setPrice(['Consult Credit', 100])}>{(price && price[0] === 'Consult Credit') ? <Red>Consult Credit $100.00</Red> : 'Consult Credit $100.00'}</NavButton>
-      
+                  <NavButton onClick={() => setPrice(['1 page', singleMeal.price, singleMeal.name])}>{(price && price[0] === '1 page') ? <Red>1 page</Red> : '1 page'}</NavButton>
+                  <NavButton onClick={() => setPrice(['2 page', singleMeal.price * 2, singleMeal.name])}>{(price && price[0] === '2 pages') ? <Red>2 pages</Red> : '2 pages'}</NavButton>
+                  <NavButton onClick={() => setPrice(['3 page', singleMeal.price * 3, singleMeal.name])}>{(price && price[0] === '3 pages') ? <Red>3 pages</Red> : '3 pages'}</NavButton>
+
               </ButtonContainer>
               }
 
+              {singleMeal.count_type === '25' &&
+                <ButtonContainer>
+                  <NavButton onClick={() => setPrice(['25', singleMeal.price, singleMeal.name])}>{(price && price[0] === '25') ? <Red>25</Red> : '25'}</NavButton>
+                  <NavButton onClick={() => setPrice(['50', singleMeal.price * 2, singleMeal.name])}>{(price && price[0] === '50') ? <Red>50</Red> : '50'}</NavButton>
+                  <NavButton onClick={() => setPrice(['100', singleMeal.price * 4, singleMeal.name])}>{(price && price[0] === '100') ? <Red>100</Red> : '100'}</NavButton>
 
+              </ButtonContainer>
+              } 
+               
              </IngredientBox>
             <IngredientBox title={`Ticket Items: (${(pickup.length)})` } actions={<RedText>{`$${subTotal}`}</RedText>}>      
            <SmallGrid>

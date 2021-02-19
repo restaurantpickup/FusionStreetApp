@@ -21,39 +21,47 @@ users = User.create([
 meals = Meal.create([
 
     #Full Menu
-    {name: "Disco Juice", price: 25, count_type: '1', image_url: "https://github.com/restaurantpickup/ChefCraig/blob/main/assets/css/images/Juice1.JPG?raw=true", meal_type: 'Juice'},
-    {name: "Disco Rolls", price: 30, count_type: '2', image_url: "https://github.com/restaurantpickup/ChefCraig/blob/main/assets/css/images/Rolls.jpg?raw=true", meal_type: 'Rolls'},
-    {name: "Intimate Dining", price: 100, count_type: '', image_url: "https://github.com/restaurantpickup/ChefCraig/blob/main/assets/css/images/FD.jpeg?raw=true", meal_type: 'Dining'},
+    {name: "Chafer Set", price: 10, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingSet.jpg?raw=true", meal_type: 'Catering'},
+    {name: "Chafer Full Pan", price:25, count_type: '25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingPan.jpg?raw=true", meal_type: 'Catering'},
+    {name: "Chafer Half Pan", price: 15, count_type: '25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingHalfPan.jpg?raw=true", meal_type: 'Catering'},
+    {name: "Chafer Full Pan(lid)", price: 15, count_type: '25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingCover.jpg?raw=true", meal_type: 'Catering'},
+    {name: "Chafer Half Pan(lid)", price: 10, count_type: '25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingHalfCover.jpg?raw=true", meal_type: 'Catering'},
+    {name: "Wire Chafer Stand", price: 5, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChaferRack.jpg?raw=true", meal_type: 'Catering'},
+    {name: "4 hour wick chafing dish fuel", price: 8, count_type: '5', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingFuel.jpg?raw=true", meal_type: 'Catering'},
+    {name: "1 Compartment Takeout Box", price: 15, count_type: '25', image_url: "https://github.com/restaurantpickup/Store/blob/main/TakeOut.jpg?raw=true", meal_type: 'Packing'},
+    {name: 'Choice 48 oz. Black 9" Round Microwavable', price: 10, count_type: '25', image_url: "https://cdnimg.webstaurantstore.com/images/products/large/217729/994926.jpg", meal_type: 'Packing'},
+    {name: "2 Piece Shaker", price: 10, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Shaker.jpg?raw=true", meal_type: 'Bar'},
+    {name: "Practice Bottle", price: 12, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/PracticeBottle.jpg?raw=true", meal_type: 'Bar'},
+    {name: "Muddler", price: 15, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Muddler.jpg?raw=true", meal_type: 'Bar'},
+    {name: "Pourer", price: 2, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Pourer.jpg?raw=true", meal_type: 'Bar'},
+    {name: "Website", price: 100, count_type: '1', image_url: "https://github.com/restaurantpickup/VirtualRestaurant/blob/main/links/VR.jpeg?raw=true", meal_type: 'Website'},
+   
+
+
 ])
 ingredients = Ingredient.create([
+    #Catering
+    {title: 'Chafer Set', description: "This chafer stand kit is an inexpensive alternative to traditional chafers. It can be disposed of after use, saving you labor costs, precious storage space, and time as you don't have to worry about washing and caring for your chafer. This chafer stand kit is a cost effective but extremely efficient option for your business.", score: 0,  meal: meals[0]},
+    {title: 'Chafer Full Pan', description: "", score: 0,  meal: meals[0]},
+    {title: '(2) Chafer Half Pan', description: "", score: 0,  meal: meals[0]},
+    {title: 'Wire Chafer Stand', description: "", score: 0,  meal: meals[0]},
+    {title: '(2) 4 hour wick chafing fuel', description: "", score: 0,  meal: meals[0]},
 
-    {title: 'Fresh Collard Greens braised in Coconut Milk and smoked Turkey. Hand rolled in
-    gluten-free Wontons and deep-fried to a crispy golden brown, served with a Citrus
-    Coconut/Curry dipping sauce.', description: '', score: 0,  meal: meals[0]},
-  
-   
-    {title: '&quot;The Best Immune System Booster on the Innanet!&quot;
-    Disco Juice is a combination of natural roots and juices, concocted with love and
-    compassion for the people in these serious, pandemic times.  All ingredients are either
-    high in alkaline and/or are known to be anti-inflammatory agents that embody multiple
-    health benefits including boosting the immune system.  Originally, Chef Craig created a
-    “Do It Yourself” video on YouTube, demonstrating, step by step instructions as to how to
-    create this product for yourself. 
-    ***Turmeric, lemon and ginger are rich in antioxidants and anti-inflammatory properties,
-    which are stated to cleanse the body and strengthen immune system.***
-     Turmeric helps in boosting skin health.
-     Lemon has anti-ageing and anti-inflammatory properties.
-     Ginger is said to be good for digestive system.', description: '', score: 0,  meal: meals[1]},
- 
+    {title: 'Chafer Full Pan', description: "Great for cooking, storing, and serving all your entrees, sides, appetizers, and desserts, this versatile pan is perfect for banquets and events of any size. It provides unparalleled temperature retention and can hold up to 228 fl. oz. of your signature menu items.", score: 0,  meal: meals[1]},
+    {title: 'Chafer Half Pan', description: "Great for cooking, storing, and serving all your entrees, sides, appetizers, and desserts, this versatile pan is perfect for banquets and events of any size. It provides unparalleled temperature retention and can hold up to 120 fl. oz. of your signature menu items.", score: 0,  meal: meals[2]},
+    {title: 'Chafer Full Pan(lid)', description: "Conserve your food's hot temperature with this Choice full size foil steam table pan lid. Perfectly sized to fit your full size steam table pan (sold separately), this lid provides a tight seal for your sides, appetizers, and desserts! All you need to do is press the foil around the pan's rim in order to keep your food at its ideal temperature.", score: 0,  meal: meals[3]},
+    {title: 'Chafer Half Pan(lid)', description: "Conserve your food's hot temperature with this Choice full size foil steam table pan lid. Perfectly sized to fit your full size steam table pan (sold separately), this lid provides a tight seal for your sides, appetizers, and desserts! All you need to do is press the foil around the pan's rim in order to keep your food at its ideal temperature.", score: 0,  meal: meals[4]},
+    {title: 'Wire Chafer Stand', description: "This chafer stand is an inexpensive alternative to traditional chafers. It can be disposed of after use, saving you labor costs, precious storage space, and time as you don't have to worry about washing and caring for your chafer. A superior solution to buffet-style service on a budget, this Choice chrome chafer stand is perfect for your catered event.", score: 0,  meal: meals[5]},
+    {title: '4 hour wick chafing dish fuel', description: "Delivering a consistent, long-lasting flame, this Choice wick fuel is essential for reliable chafer heating. Its wick design and non-flammable liquid diethylene glycol fuel promote safe burning that is also easy to light. Great for any restaurant buffet line or catered event, this series of Choice wick chafing fuels serves as the hottest and safest burning fuel on the market. ", score: 0,  meal: meals[6]},
+    {title: '1 Compartment Takeout Box', description: "1 compartment takeout box is perfect for restaurants, caterers, and sandwich shops that serve anything from hot entrees to cold salads. Package up takeout orders or leftovers for your customers while also taking a step toward going green with this environmentally smart option! ", score: 0,  meal: meals[7]},
+    {title: 'Choice 48 oz. Black 9" Round Microwavable', description: "Both the container and lid are recyclable and simple to clean, making them easy to reuse or dispose of once your guests have finished their meal. Use this versatile Choice container and lid to package your signature to-go items and ensure mess-free transportation.  ", score: 0,  meal: meals[8]},
+    {title: '2 Piece Shaker', description: "Whether you need to concoct specialty martinis, mojitos, long island iced teas, whiskey sours, or screwdrivers, this shaker set is an ideal addition to any mixologist's arsenal! This shaker tin set allows you to effectively mix and chill cocktails prior to serving.", score: 0,  meal: meals[9]},
+    {title: 'Practice Bottle', description: "Designed to fit standard 750mL liquor bottles, this collar-less, angled liquor speed pourer is perfect for busy bartenders who are constantly pouring shots and creating signature mixed drinks. It fits snugly onto bottles so your bartenders will always have immediate, simple access to any liquor they need. ", score: 0,  meal: meals[10]},
+    {title: 'Muddler', description: "Made of lacquered hardwood, this wooden muddler has a dark brown color and its highly polished finish gives this bar utensil a very sleek and upscale appeal! Alcohol-proof, this muddler will stand up to multiple concoction creations! Impress your guests with a cocktail using only the freshest of ingredients!", score: 0,  meal: meals[11]},
+    {title: 'Pourer', description: "Designed to fit standard 750mL liquor bottles, this collar-less, angled liquor speed pourer is perfect for busy bartenders who are constantly pouring shots and creating signature mixed drinks. It fits snugly onto bottles so your bartenders will always have immediate, simple access to any liquor they need.", score: 0,  meal: meals[12]},
+    {title: 'Website', description: "We will build you a mobile responsive website with contact/schedule/sign-up forms.", score: 0,  meal: meals[13]},
+    
 
-    {title: '“Intimate Dining” is a full service, personal chef dining experience that accommodates
-    from 2 to 20 guests in the greater Los Angeles area.  Chef Craig will create a 5-course
-    meal, fusing the tastes and flavors of the Black Atlantic diaspora.  Chef Craig works with
-    the client to determine protein, vegetarian and/or vegan options to ensure that this
-    encounter is all-inclusive. Signature drinks, wine pairing and atmosphere enhancements
-    will be served as a catalyst for conversation, sharing and celebration. Our goal is to create
-    a most memorable experience for the client and guest(s).', description: '', score: 0,  meal: meals[2]},
- 
 ])
 
 
