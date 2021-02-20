@@ -34,7 +34,7 @@ meals = Meal.create([
     {name: "Practice Bottle", price: 12, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/PracticeBottle.jpg?raw=true", meal_type: 'Bar'},
     {name: "Muddler", price: 15, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Muddler.jpg?raw=true", meal_type: 'Bar'},
     {name: "Pourer", price: 2, count_type: '1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Pourer.jpg?raw=true", meal_type: 'Bar'},
-    {name: "Website", price: 100, count_type: '1', image_url: "https://github.com/restaurantpickup/VirtualRestaurant/blob/main/links/VR.jpeg?raw=true", meal_type: 'Website'},
+    {name: "Website", price: 100, count_type: '1', image_url: "https://github.com/restaurantpickup/Community/blob/main/VR.jpeg?raw=true", meal_type: 'Website'},
    
 
 
