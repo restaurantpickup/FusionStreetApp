@@ -110,7 +110,7 @@ useEffect(() => {
     return (
       <Wrapper>
           <Container>
-          <PickupContainer onClick={handleLink}><CompanyLogo><img src={require('../Images/RestaurantPickup.png')} alt={'RestaurantPickup'} /></CompanyLogo><Block></Block></PickupContainer>
+          <PickupContainer onClick={handleLink}><CompanyLogo><img src={require('../Images/RestaurantPickup.png')} alt={'RestaurantPickup'} /></CompanyLogo><Block>RestaurantPickup</Block></PickupContainer>
 
        </Container>  
       </Wrapper>  

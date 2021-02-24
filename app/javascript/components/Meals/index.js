@@ -143,14 +143,7 @@ export default function Meals() {
       const result =  meals.filter(meal => meal.meal_type === 'Bar')
       setFilteredMeals(result)
     }
-    const filterFourth = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Website')
-      setFilteredMeals(result)
-    }
-    const filterFifth = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'DiscoKitchen')
-      setFilteredMeals(result)
-    }
+
   
   
    
@@ -179,7 +172,7 @@ export default function Meals() {
           <NavButton onClick={filterFirst}>Catering Supplies</NavButton>
           <NavButton onClick={filterSecond}>Packaging Supplies</NavButton>
           <NavButton onClick={filterThird}>Bar</NavButton>
-          <NavButton onClick={filterFourth}>Websites</NavButton>
+     
           </ButtonContainer>
           </TopContainer> 
       </TopContentContainer>   

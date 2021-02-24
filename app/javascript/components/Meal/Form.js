@@ -247,9 +247,8 @@ export default function Header() {;
               }
                {singleMeal.count_type !== '25' && singleMeal.meal_type === 'Website' &&
                 <ButtonContainer>
-                  <NavButton onClick={() => setPrice(['1 page', singleMeal.price, singleMeal.name])}>{(price && price[0] === '1 page') ? <Red>1 page</Red> : '1 page'}</NavButton>
-                  <NavButton onClick={() => setPrice(['2 page', singleMeal.price * 2, singleMeal.name])}>{(price && price[0] === '2 pages') ? <Red>2 pages</Red> : '2 pages'}</NavButton>
-                  <NavButton onClick={() => setPrice(['3 page', singleMeal.price * 3, singleMeal.name])}>{(price && price[0] === '3 pages') ? <Red>3 pages</Red> : '3 pages'}</NavButton>
+
+                  <NavButton onClick={() => setPrice(['3 pages', singleMeal.price * 3, singleMeal.name])}>{(price && price[0] === '3 pages') ? <Red>3 pages</Red> : '3 pages'}</NavButton>
 
               </ButtonContainer>
               }
