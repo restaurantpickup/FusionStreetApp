@@ -132,20 +132,22 @@ export default function Meals() {
 
     //Search by "meal_type"
     const filterFirst = () => {
-    const result =  meals.filter(meal => meal.meal_type === 'Catering')
-    setFilteredMeals(result)
-    }
-    const filterSecond = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Packing')
-    setFilteredMeals(result) 
-    }
-    const filterThird = () => {
-      const result =  meals.filter(meal => meal.meal_type === 'Bar')
+      const result =  meals.filter(meal => meal.meal_type === 'Tapas')
       setFilteredMeals(result)
-    }
-
-  
-  
+      }
+      const filterSecond = () => {
+        const result =  meals.filter(meal => meal.meal_type === 'PhatAzz')
+      setFilteredMeals(result) 
+      }
+      const filterThird = () => {
+        const result =  meals.filter(meal => meal.meal_type === 'Sliders')
+        setFilteredMeals(result)
+      }
+      const filterFourth = () => {
+        const result =  meals.filter(meal => meal.meal_type === 'Tacos')
+        setFilteredMeals(result)
+      }
+    
    
     
     //Mapping through the Meals array with styling
@@ -164,15 +166,18 @@ export default function Meals() {
       <TopContainer>
       <ParagraphContainer>
           <ParagraphText>
-            <strong>{'Restaurant Pickup'}</strong>					
+            <strong>{'Fusion Street App'}</strong>					
           </ParagraphText>
-       </ParagraphContainer>
+          </ParagraphContainer>
           <ButtonContainer>
-          <NavButton onClick={filterAll}>Full List</NavButton>
-          <NavButton onClick={filterFirst}>Catering Supplies</NavButton>
-          <NavButton onClick={filterSecond}>Packaging Supplies</NavButton>
-          <NavButton onClick={filterThird}>Bar</NavButton>
-     
+          <NavButton onClick={filterAll}>Full Menu</NavButton>
+          <NavButton onClick={filterFirst}>Tapas</NavButton>
+          <NavButton onClick={filterSecond}>PhatAzz</NavButton>
+        
+          </ButtonContainer>
+          <ButtonContainer>
+          <NavButton onClick={filterThird}>Sliders</NavButton>
+          <NavButton onClick={filterFourth}>Tacos</NavButton>
           </ButtonContainer>
           </TopContainer> 
       </TopContentContainer>   

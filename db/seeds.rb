@@ -1,3 +1,16 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+
+
 
 users = User.create([
     {name: 'Michael', first_name: "Michael", last_name: "Coon", address: "456 Yahoo Ln.", office_address: "Same as before", phone: "456-555-6666", location: "homeless", email: "test@gmail.com", password: "password", image_url: "http://4.bp.blogspot.com/_Euy8x6BaKxY/SxLul034IKI/AAAAAAAAEQI/OdteUvNglAw/s1600/Mick-%26-Annie_112109_0065-baseC.jpg"}
@@ -7,48 +20,49 @@ users = User.create([
 
 meals = Meal.create([
 
-    #Full Menu
-    {name: "Chafer Set", price: 10, count_type:'1', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingSet.jpg?raw=true", meal_type:'Catering'},
-    {name: "Chafer Full Pan", price:25, count_type:'25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingPan.jpg?raw=true", meal_type:'Catering'},
-    {name: "Chafer Half Pan", price: 15, count_type:'25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingHalfPan.jpg?raw=true", meal_type:'Catering'},
-    {name: "Chafer Full Pan(lid)", price: 15, count_type:'25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingCover.jpg?raw=true", meal_type:'Catering'},
-    {name: "Chafer Half Pan(lid)", price: 10, count_type:'25', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingHalfCover.jpg?raw=true", meal_type:'Catering'},
-    {name: "Wire Chafer Stand", price: 5, count_type:'1', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChaferRack.jpg?raw=true", meal_type:'Catering'},
-    {name: "4 hour wick chafing dish fuel", price: 8, count_type:'5', image_url: "https://github.com/restaurantpickup/Store/blob/main/ChafingFuel.jpg?raw=true", meal_type:'Catering'},
-    {name: "1 Compartment Takeout Box", price: 15, count_type:'25', image_url: "https://github.com/restaurantpickup/Store/blob/main/TakeOut.jpg?raw=true", meal_type:'Packing'},
-    {name: 'Choice 48 oz. Black 9" Round Microwavable', price: 10, count_type: '25', image_url: "https://cdnimg.webstaurantstore.com/images/products/large/217729/994926.jpg", meal_type:'Packing'},
-    {name: "2 Piece Shaker", price: 10, count_type:'1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Shaker.jpg?raw=true", meal_type:'Bar'},
-    {name: "Practice Bottle", price: 12, count_type:'1', image_url: "https://github.com/restaurantpickup/Store/blob/main/PracticeBottle.jpg?raw=true", meal_type:'Bar'},
-    {name: "Muddler", price: 15, count_type:'1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Muddler.jpg?raw=true", meal_type:'Bar'},
-    {name: "Pourer", price: 2, count_type:'1', image_url: "https://github.com/restaurantpickup/Store/blob/main/Pourer.jpg?raw=true", meal_type:'Bar'},
+  #Tapas
+  {name: "Tariq Guadalete", price: 10, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Tapas'},
+  {name: "Frijole On Fire", price: 9, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Tapas'},
+  
+ 
+  #Phat AZZ
+  {name: "F'D Begavior", price: 13, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'PhatAzz'},
+  {name: "Spudz-Ma-Frenzy", price: 11, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'PhatAzz'},
+ 
+
+  #Sliders
+  {name: "Country Gramma", price: 13.50, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Sliders'},
+  {name: "9th Island", price: 12.50, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Sliders'},
+  {name: "Konnichiwa Homie", price: 12.50, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Sliders'},
+  {name: "Raider Street", price: 11.50, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Sliders'},
+  {name: "Arnold Kulakofski", price: 11.50, count_type:"Fry", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Sliders'},
+  {name: "Vaca Gorda", price: 9.50, count_type:"", image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Sliders'},
+  
+
+  #Tacos
+  {name: "Tropical Clucker", price: 13, count_type:'', image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Tacos'},
+  {name: "Piggy Smalls ", price: 11.50, count_type:'', image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Tacos'},
+  {name: "Lil Shawty ", price: 10, count_type:'', image_url: "https://github.com/restaurantpickup/FusionStreet/blob/main/img/menu/promo_slide_3.jpg?raw=true", meal_type: 'Tacos'},
 
 ])
 ingredients = Ingredient.create([
-    #Catering
-    {title: 'Chafer Set', description: "This chafer stand kit is an inexpensive alternative to traditional chafers. It can be disposed of after use, saving you labor costs, precious storage space, and time as you don't have to worry about washing and caring for your chafer. This chafer stand kit is a cost effective but extremely efficient option for your business.", score: 0,  meal: meals[0]},
-    {title: 'Chafer Full Pan', description: "", score: 0,  meal: meals[0]},
-    {title: '(2) Chafer Half Pan', description: "", score: 0,  meal: meals[0]},
-    {title: 'Wire Chafer Stand', description: "", score: 0,  meal: meals[0]},
-    {title: '(2) 4 hour wick chafing fuel', description: "", score: 0,  meal: meals[0]},
 
-    {title: 'Chafer Full Pan', description: "Great for cooking, storing, and serving all your entrees, sides, appetizers, and desserts, this versatile pan is perfect for banquets and events of any size. It provides unparalleled temperature retention and can hold up to 228 fl. oz. of your signature menu items.", score: 0,  meal: meals[1]},
-    {title: 'Chafer Half Pan', description: "Great for cooking, storing, and serving all your entrees, sides, appetizers, and desserts, this versatile pan is perfect for banquets and events of any size. It provides unparalleled temperature retention and can hold up to 120 fl. oz. of your signature menu items.", score: 0,  meal: meals[2]},
-    {title: 'Chafer Full Pan(lid)', description: "Conserve your food's hot temperature with this Choice full size foil steam table pan lid. Perfectly sized to fit your full size steam table pan (sold separately), this lid provides a tight seal for your sides, appetizers, and desserts! All you need to do is press the foil around the pan's rim in order to keep your food at its ideal temperature.", score: 0,  meal: meals[3]},
-    {title: 'Chafer Half Pan(lid)', description: "Conserve your food's hot temperature with this Choice full size foil steam table pan lid. Perfectly sized to fit your full size steam table pan (sold separately), this lid provides a tight seal for your sides, appetizers, and desserts! All you need to do is press the foil around the pan's rim in order to keep your food at its ideal temperature.", score: 0,  meal: meals[4]},
-    {title: 'Wire Chafer Stand', description: "This chafer stand is an inexpensive alternative to traditional chafers. It can be disposed of after use, saving you labor costs, precious storage space, and time as you don't have to worry about washing and caring for your chafer. A superior solution to buffet-style service on a budget, this Choice chrome chafer stand is perfect for your catered event.", score: 0,  meal: meals[5]},
-    {title: '4 hour wick chafing dish fuel', description: "Delivering a consistent, long-lasting flame, this Choice wick fuel is essential for reliable chafer heating. Its wick design and non-flammable liquid diethylene glycol fuel promote safe burning that is also easy to light. Great for any restaurant buffet line or catered event, this series of Choice wick chafing fuels serves as the hottest and safest burning fuel on the market. ", score: 0,  meal: meals[6]},
-    {title: '1 Compartment Takeout Box', description: "1 compartment takeout box is perfect for restaurants, caterers, and sandwich shops that serve anything from hot entrees to cold salads. Package up takeout orders or leftovers for your customers while also taking a step toward going green with this environmentally smart option! ", score: 0,  meal: meals[7]},
-    {title: 'Choice 48 oz. Black 9" Round Microwavable', description: "Both the container and lid are recyclable and simple to clean, making them easy to reuse or dispose of once your guests have finished their meal. Use this versatile Choice container and lid to package your signature to-go items and ensure mess-free transportation.  ", score: 0,  meal: meals[8]},
-    {title: '2 Piece Shaker', description: "Whether you need to concoct specialty martinis, mojitos, long island iced teas, whiskey sours, or screwdrivers, this shaker set is an ideal addition to any mixologist's arsenal! This shaker tin set allows you to effectively mix and chill cocktails prior to serving.", score: 0,  meal: meals[9]},
-    {title: 'Practice Bottle', description: "Designed to fit standard 750mL liquor bottles, this collar-less, angled liquor speed pourer is perfect for busy bartenders who are constantly pouring shots and creating signature mixed drinks. It fits snugly onto bottles so your bartenders will always have immediate, simple access to any liquor they need. ", score: 0,  meal: meals[10]},
-    {title: 'Muddler', description: "Made of lacquered hardwood, this wooden muddler has a dark brown color and its highly polished finish gives this bar utensil a very sleek and upscale appeal! Alcohol-proof, this muddler will stand up to multiple concoction creations! Impress your guests with a cocktail using only the freshest of ingredients!", score: 0,  meal: meals[11]},
-    {title: 'Pourer', description: "Designed to fit standard 750mL liquor bottles, this collar-less, angled liquor speed pourer is perfect for busy bartenders who are constantly pouring shots and creating signature mixed drinks. It fits snugly onto bottles so your bartenders will always have immediate, simple access to any liquor they need.", score: 0,  meal: meals[12]},
-  
+  {title: 'Tariq Guadalete', description: '2 Smoked brisket empanadason a bed of red and black frijoles and topped with our candied jalapeno crema slaw.', score: 0,  meal: meals[0]},
+  {title: 'FriJole On Fire', description: '2 Perfectly seasoned black bean sliders topped with your choice of chedder manchego, swiss, gouda, or began cheese DA CHEEZLE FA SHEEZLE!', score: 0,  meal: meals[1]},
+  {title: "F'D UP BEHAVIOR", description: "Bacon wrapped kosher dog topped with spicy deep fried cheese curds and  smothered in WTF'S Smoked Brisket Chili.", score: 0,  meal: meals[2]},
+  {title: 'SPUDZ-MA-FRENZY', description: "Seasoned to perfection, sidewinder cut fries topped with our amazing WTF'S Smoked Brisket Chili. GO AHEAD AND LICK YO FINGERS HUR!", score: 0,  meal: meals[3]},
+  {title: 'COUNTRY GRAMMA', description: "2 BBQ Angus brisket sliders rubbed and smoked to perfection. Topped with Granny's potato salad on toasted Gouda cheese Brioche. IT'S HA WE DO MY DUDE!", score: 0,  meal: meals[4]},
+  {title: 'KONNICHIWA HOMIE', description: "2 Deep fried Bao buns stuffed with our homemade Filipino Adobo pork belly, and Chef's wasabi slaw.", score: 0,  meal: meals[5]},
+  {title: '9th ISLAND', description: "2  Smoked Kalua pork sliders drenched in our homemade WTF'S UMPA to perfection. Topped with Granny's potato salad on toasted Gouda cheese Brioche LUMPA BBQ sauce. THAT BBQ SAUCE THOUGH...WEW! ONO! ", score: 0,  meal: meals[6]},
+  {title: 'RAIDER STREET', description: "2 quarter pound Charbroiled Angus beef sliders. to perfection. Topped with  Granny's potato salad on toasted Gouda cheese Brioche. IT'S HA WE DO MY DUDE!", score: 0,  meal: meals[7]},
+  {title: 'ARNOLD KULAKOFSKI', description: " 2  quarter pound Charbroiled Angus beef Reuben sliders. Topped with our black and red frijole spread, our smoked porkbelly, Cheddar cheese, bed of guacamole spread. Generously drizzled with WTF'S Sexy Diablo aioli on toasted Cheddar Brioche. MUY CALIENTE!!! ", score: 0,  meal: meals[8]},
+  {title: 'VACA GORDA', description: "2  quarter pound, charbroiled Angus beef sliders on toasted Brioche. Sided with lettuce, tomatoes, pickles and topped with any of our WTF'S  burger and fry sauces. 454 GRAMS OF SINFULLNESS!", score: 0,  meal: meals[9]},
+  {title: 'TROPICAL CLUCKER', description: "Chef's sinfully delicious Jerk chicken tacos. Topped with a honey, pineapple, mango, and Fresno salsa. MON FIRE! ", score: 0,  meal: meals[10]},
+  {title: 'PIGGY SMALLS', description: "3 Smoked and seasoned to perfection, our pulled pork tacos with  shredded Gouda, Cheddar, and Manchega cheese blend. Drizzled with WTF'S Sexy Diablo and topped with candied jalapeno crema slaw. IGGY AIN'T GOT NO BEEF WIT CHA ", score: 0,  meal: meals[11]},
+  {title: 'LIL SHAWTY', description: "3 Spicy Jackfruit tacos on red and black frijoles, candied jalapeno crema slaw. Topped with vegan cheese, and our Pico de Gallo. PRETTY HOT & TEMPTING!", score: 0,  meal: meals[12]},
+
+
 ])
-
-
-
-
 
 
 

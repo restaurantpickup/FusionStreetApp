@@ -108,18 +108,18 @@ export default function Meal(props) {
         setSingleMeal(meal)
         history.push(`/items/${name}`)
     }
-    console.log(meal.image_url)
+  
 
     return (
-    <Box meal={meal} title={  <CompanyLogo>
-        <img src={require('../Images/RestaurantPickup.png')} alt={'RestaurantPickup'} />
-    </CompanyLogo>} actions={<LinkButton onClick={handleLink}><PickupIconPlus/> </LinkButton> }> 
-        <MealLogo>
-            <img src={meal.image_url} alt={meal.name} />
-        </MealLogo>
-        <Block><MealName>{meal.name}</MealName></Block>
-        <Block><PriceName>${meal.price} ({meal.count_type}) Piece(s)</PriceName></Block>
-        <Block><PiecesName>({meal.count_type}) Piece(s)</PiecesName></Block>
-    </Box>
+        <Box meal={meal} title={  <CompanyLogo>
+            <img src={require('../Images/FusionStreet.jpg')} alt={'Fusion Street'} />
+        </CompanyLogo>} actions={<LinkButton onClick={handleLink}><PickupIconPlus/> </LinkButton> }> 
+            <MealLogo>
+                <img src={meal.image_url} alt={meal.name} />
+            </MealLogo>
+            <Block><MealName>{meal.name}</MealName></Block>
+            {/* <Block><PriceName>${meal.price} ({meal.count_type}) Piece(s)</PriceName></Block>
+            <Block><PiecesName>({meal.count_type}) Piece(s)</PiecesName></Block> */}
+        </Box>
     )
 }

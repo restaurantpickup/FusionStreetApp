@@ -64,6 +64,19 @@ const CompanyLogo = styled.div`
         border: 1px solid #efefef;
     }
 `
+const Button = styled.button`
+  color: #fff;
+  background: #ed5841;
+  font-size: 1em;
+  margin: 1em;
+  padding: 1em 1em;
+  border: 2px solid #ca3d26;
+  border-radius: 3px;
+  &:hover {
+    color: #ed5841;
+    background: #fff none repeat scroll 0 0;
+  }
+`;
 
 export default function Login(props) {
   const [meals, setMeals] = useContext(MealContext);
@@ -110,8 +123,8 @@ useEffect(() => {
     return (
       <Wrapper>
           <Container>
-          <PickupContainer onClick={handleLink}><CompanyLogo><img src={require('../Images/RestaurantPickup.png')} alt={'RestaurantPickup'} /></CompanyLogo><Block>RestaurantPickup</Block></PickupContainer>
-
+          <PickupContainer onClick={handleLink}><CompanyLogo><img src={require('../Images/FusionStreet.jpg')} alt={'Fusion Street'} /></CompanyLogo><Block></Block></PickupContainer>
+<PickupContainer  onClick={handleLink}><Button>Order Now</Button></PickupContainer>
        </Container>  
       </Wrapper>  
         )   

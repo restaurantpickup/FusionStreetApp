@@ -155,12 +155,7 @@ export default function Header() {;
     const [price, setPrice] = useState([singleMeal.count_type, singleMeal.price, singleMeal.name])
     const [toggleIngredient, setToggleIngredient] = useState(false)
     
-    const titleList = singleMeal.ingredients.map((item, index) => {
-    return( <li key={index}><strong>{item.title}</strong></li>)})
-
-    const ingredientList = singleMeal.ingredients.map((item, index) => {
-      return( <ul key={index}><strong>{item.description}</strong></ul>)})
-
+   
     const createPickup = () => {
      if(price){
       setPickup([...pickup, {
@@ -174,6 +169,13 @@ export default function Header() {;
         modification: `w/${price[0]}`  
     }])} 
     }
+    const titleList = singleMeal.ingredients.map((item, index) => {
+      return( <li key={index}><strong>{item.title}</strong></li>)})
+  
+      const ingredientList = singleMeal.ingredients.map((item, index) => {
+        return( <ul key={index}><strong>{item.description}</strong></ul>)})
+        
+  
     const subTotal = pickup.reduce((acc, item) => acc + (item.price[1]), 0)
     
     const deletePickup = () => {
@@ -237,30 +239,26 @@ export default function Header() {;
             <Wrapper>
             <IngredientBox title={`Item: (${(n)})${singleMeal.name}`} actions={''}>  
            
-              {singleMeal.count_type === '1' && singleMeal.meal_type !== 'Website' &&
+              {singleMeal.name === 'Vaca Gorda' &&
                 <ButtonContainer>
-                  <NavButton onClick={() => setPrice(['1', singleMeal.price, singleMeal.name])}>{(price && price[0] === '1') ? <Red>1</Red> : '1'}</NavButton>
-                  <NavButton onClick={() => setPrice(['5', singleMeal.price * 5, singleMeal.name])}>{(price && price[0] === '5') ? <Red>5</Red> : '5'}</NavButton>
-                  <NavButton onClick={() => setPrice(['10', singleMeal.price * 10, singleMeal.name])}>{(price && price[0] === '10') ? <Red>10</Red> : '10'}</NavButton>
+                  <NavButton onClick={() => setPrice(['Regular', singleMeal.price, singleMeal.name])}>{(price && price[0] === 'Regular') ? <Red>Regular</Red> : 'Regular'}</NavButton>
+                  <NavButton onClick={() => setPrice(['W/ Cheese', singleMeal.price + 1, singleMeal.name])}>{(price && price[0] === 'W/ Cheese') ? <Red>W/ Cheese</Red> : 'W/ Cheese'}</NavButton>
+                  <NavButton onClick={() => setPrice(['W/ Fries', singleMeal.price + 3, singleMeal.name])}>{(price && price[0] === 'W/ Fries') ? <Red>W/ Fries</Red> : 'W/ Fries'}</NavButton>
+                  <NavButton onClick={() => setPrice(['W/Cheese and Fries', singleMeal.price + 4, singleMeal.name])}>{(price && price[0] === 'W/Cheese and Fries') ? <Red>W/Cheese and Fries</Red> : 'W/ Cheese and Fries'}</NavButton>
+
 
               </ButtonContainer>
               }
-               {singleMeal.count_type !== '25' && singleMeal.meal_type === 'Website' &&
+             
+             {singleMeal.meal_type === 'Tacos' &&
                 <ButtonContainer>
+                  <NavButton onClick={() => setPrice(['Regular', singleMeal.price, singleMeal.name])}>{(price && price[0] === 'Regular') ? <Red>Regular</Red> : 'Regular'}</NavButton>
+                  <NavButton onClick={() => setPrice(['W/ Fries', singleMeal.price + 3, singleMeal.name])}>{(price && price[0] === 'W/ Fries') ? <Red>W/ Fries</Red> : 'W/ Fries'}</NavButton>
 
-                  <NavButton onClick={() => setPrice(['3 pages', singleMeal.price * 3, singleMeal.name])}>{(price && price[0] === '3 pages') ? <Red>3 pages</Red> : '3 pages'}</NavButton>
 
               </ButtonContainer>
               }
-
-              {singleMeal.count_type === '25' &&
-                <ButtonContainer>
-                  <NavButton onClick={() => setPrice(['25', singleMeal.price, singleMeal.name])}>{(price && price[0] === '25') ? <Red>25</Red> : '25'}</NavButton>
-                  <NavButton onClick={() => setPrice(['50', singleMeal.price * 2, singleMeal.name])}>{(price && price[0] === '50') ? <Red>50</Red> : '50'}</NavButton>
-                  <NavButton onClick={() => setPrice(['100', singleMeal.price * 4, singleMeal.name])}>{(price && price[0] === '100') ? <Red>100</Red> : '100'}</NavButton>
-
-              </ButtonContainer>
-              } 
+             
                
              </IngredientBox>
             <IngredientBox title={`Ticket Items: (${(pickup.length)})` } actions={<RedText>{`$${subTotal}`}</RedText>}>      
