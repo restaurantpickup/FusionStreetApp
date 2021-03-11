@@ -118,7 +118,7 @@ function Form(props) {;
           <TopContainer>
         <PageTitle title={<><InvoiceIcon/> {`Invoice: `}</>} action={''}/>     
            <Wrapper>
-           <IngredientBox title={`Ticket Items: (${(pickup.length)})${''}`} actions={<Red>{`$${subTotal}.00`}</Red>}> 
+           <IngredientBox title={`Ticket Items: (${(pickup.length)})${''}`} actions={<Red>{`$${subTotal}`}</Red>}> 
           <SmallGrid>
           {pickupList}
           </SmallGrid>
