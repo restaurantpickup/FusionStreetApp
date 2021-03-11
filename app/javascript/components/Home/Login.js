@@ -65,13 +65,15 @@ const CompanyLogo = styled.div`
     }
 `
 const Button = styled.button`
+  cursor: pointer;
   color: #fff;
   background: #ed5841;
-  font-size: 1em;
+  font-size: 2em;
   margin: 1em;
-  padding: 1em 1em;
+  padding: .5em 1em;
   border: 2px solid #ca3d26;
   border-radius: 3px;
+  transition: 0.3s;
   &:hover {
     color: #ed5841;
     background: #fff none repeat scroll 0 0;

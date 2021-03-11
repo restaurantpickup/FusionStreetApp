@@ -45,10 +45,10 @@ const ParagraphContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 2rem;
   padding-bottom: 3rem;
   @media all and (min-width: 1200px){
-    font-size: 1rem;
+    font-size: 2rem;
     padding-bottom: 1.5rem;
   }
 `;
@@ -62,13 +62,13 @@ const ParagraphText = styled.p`
 const NavButton = styled.button`
   cursor: pointer;
   /* Adapt the colors based on primary prop */
-  height: 150px;
-  width: 150px;
+  height: 125px;
+  width: 125px;
   margin: 1.5rem;
   background: ${props => props.primary ? "#005F7F" : "#005F7F"};
   color: ${props => props.primary ? "white" : "white"};
   text-transform: uppercase;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: bold;
   border: .05rem solid #005470;
   border-radius: 100%;
@@ -78,7 +78,7 @@ const NavButton = styled.button`
     background: #005470;
   }
   @media all and (min-width: 1200px){
-    font-size .55rem;
+    font-size .75rem;
     margin: 1rem;
     height: 75px;
     width: 75px
@@ -117,6 +117,7 @@ const CompanyLogo = styled.div`
         border: 1px solid #efefef;
     }
 `
+
 
 export default function Meals() {
     const [meals, setMeals] = useContext(MealContext)
@@ -166,18 +167,19 @@ export default function Meals() {
       <TopContainer>
       <ParagraphContainer>
           <ParagraphText>
-            <strong>{'Fusion Street App'}</strong>					
+            <strong>{'Fusion Street'}</strong>					
           </ParagraphText>
           </ParagraphContainer>
           <ButtonContainer>
           <NavButton onClick={filterAll}>Full Menu</NavButton>
           <NavButton onClick={filterFirst}>Tapas</NavButton>
           <NavButton onClick={filterSecond}>PhatAzz</NavButton>
+          <NavButton onClick={filterThird}>Sliders</NavButton>
+          <NavButton onClick={filterFourth}>Tacos</NavButton>
         
           </ButtonContainer>
           <ButtonContainer>
-          <NavButton onClick={filterThird}>Sliders</NavButton>
-          <NavButton onClick={filterFourth}>Tacos</NavButton>
+       
           </ButtonContainer>
           </TopContainer> 
       </TopContentContainer>   
