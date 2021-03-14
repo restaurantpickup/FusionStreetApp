@@ -70,7 +70,7 @@ function Form(props) {;
     ))
 
     const description = array.join()
-    console.log(description)
+   
 
     
    
